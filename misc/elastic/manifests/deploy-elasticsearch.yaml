@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: elasticsearch
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: elasticsearch
+    spec:
+      containers:
+      - image: elasticsearch:5.5.2
+        name: elasticsearch
+        env:
+        - name: ES_JAVA_OPTS
+          value: -Xms512m -Xmx512m
