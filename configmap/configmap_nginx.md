@@ -113,7 +113,7 @@ metadata:
 spec:
   selector:
     app: proxy
-  type: nodePort
+  type: NodePort
   ports:
   - port: 80
     targetPort: 80
