@@ -104,7 +104,7 @@ spec:
     configMap:
       name: proxy-config
 ---
-apGiVersion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: proxy
@@ -136,7 +136,8 @@ pod/whoami                           1/1       Running   0          2m
 
 NAME                    TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
 service/proxy           NodePort    10.11.255.14    <none>        80:31600/TCP     17s
-service/whoami          ClusterIP   10.11.243.238   <none>        80/TCP           18m```
+service/whoami          ClusterIP   10.11.243.238   <none>        80/TCP           18m
+```
 
 ## Test de l'application
 
