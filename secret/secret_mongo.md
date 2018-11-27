@@ -35,7 +35,7 @@ Vous avez plusieurs options pour cela:
 ### Utilisation du Secret dans une variable d'environnement
 
 Définissez un Pod nommé **api-env** dont l'unique container a la spécification suivante:
-- nom: **api¨**
+- nom: **api**
 - image: **lucj/messages:1.0**
 - une variable d'environnement **MONGODB_URL** ayant la valeur liée à la clé **mongo_url** du Secret **mongo** créé précédemment
 
