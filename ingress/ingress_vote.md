@@ -11,8 +11,10 @@ De la même façon que nous l'avons fait dans un exercice précécent, clonez pu
 ```
 $ git clone https://github.com/dockersamples/example-voting-app
 $ cd example-voting-app
-$ $ kubectl create -f ./k8s-specifications
+$ kubectl create -f ./k8s-specifications
 ```
+
+Note: attention, il faudra créer le namespace **vote** au préalable, la VotingApp étant lancé dans ce namespace.
 
 ### 2. Activation du add-on Ingress dans minikube
 
@@ -27,6 +29,8 @@ Quels sont les ports utilisés pour exposer les micro-services **vote** et **res
 Créez, dans le fichier *vote_ingress.yaml*, la spécification **Ingress** permettant le routage suivant:
 - **vote.votingapp.com** sur le micro-service **vote**
 - **result.votingapp.com** sur le micro-service **result**
+
+Assurez vous que la resource Ingress soit déployée dans le namespace **vote**.
 
 ### 5. Création de la ressource Ingress
 
@@ -43,4 +47,4 @@ Par exemple, si l'IP de minikube (`minikube ip`) est **192.168.99.100**, vous de
 192.168.99.100  result.votingapp.com
 ```
 
-Vous pouvez maintenant voter depuis l'interface disponible sur **http://vote.votingapp.com** et visualiser les résultats sur l'interface disponible sur **http://result.voringapp.com**.
+Vous pouvez maintenant voter depuis l'interface disponible sur **http://vote.votingapp.com** et visualiser les résultats sur l'interface disponible sur **http://result.votingapp.com**.
