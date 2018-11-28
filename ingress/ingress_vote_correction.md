@@ -37,6 +37,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: voting-domain
+  namespace: vote
 spec:
   rules:
   - host: vote.votingapp.com
