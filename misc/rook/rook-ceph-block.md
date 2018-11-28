@@ -65,7 +65,7 @@ spec:
   - ReadWriteOnce
   resources:
     requests:
-      storage: 50M
+      storage: 1Gi
 ```
 
 Copiez le contenu ci-dessus dans un fichier pvc-rook-ceph-block.yaml et créez la resource :
