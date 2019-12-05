@@ -41,7 +41,7 @@ kind: Pod
 metadata:
   name: debug
 spec:
-  containers
+  containers:
   - name: debug
     image: alpine
     command:
